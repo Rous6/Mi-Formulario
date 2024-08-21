@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/rosa1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">♥ Formulario de Datos ♥</div>
+    </header>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="video/video3.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento <code>video</code>
+        </video>
+    </div>
+    <span id="mi"></span>
+    <div class="contenedor">
+        <form id="formulario-registro" action="#" method="post">
+            <h2 >☻ Formulario Datos ☻</h2>
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+            <div class="grupo-formulario etiquetas-inline">
+                <label>Género:</label>
+                <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+                <label><input type="radio" name="genero" value="femenino"> Femenino</label> 
+            </div>
+            
+            <div class="grupo-formulario">
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="edad">Edad:</label>
+                <input type="text" id="edad" name="edad" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="lugar">Lugar:</label>
+                <select id="lugar" name="lugar" required>
+                    <option value="" disabled selected class="opcion-negrita">Seleccionar</option>
+                    <option value="Santo Tomas">Santo Tomas</option>
+                    <option value="Quiñota">Quiñota</option>
+                    <option value="Colquemarca">Colquemarca</option>
+                    <option value="Llusco">Llusco</option>
+                    <option value="Capacmarca">Capacmarca</option>
+                    <option value="Chamaca">Chamaca</option>
+                    <option value="Livitaca">Livitaca</option>
+                </select>
+            </div>
+            <div class="botones-formulario">
+                <!-- con onclick etiqueta hacer llamado al metodo de jScrip -->
+                <button type="button" onclick="mostrarDatos()">Enviar</button> 
+                <button type="reset">Limpiar</button>
+            </div>
+        </form>
+    </div>
+    <div id="contenedor-resultados" class="contenedor">
+        <h2>♣ Datos Ingresados ♣</h2>
+        <div id="resultados"></div>
+    </div>
+    
+    <script src="js/Mostar.js"></script>
+</body>
+</html>
+

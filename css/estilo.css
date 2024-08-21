@@ -1,0 +1,217 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a:hover {
+    background-color: #d21cb1;
+    color: #fff;
+}
+
+/* Estilos responsive para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Portada Video */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+/* Contenedor */
+.contenedor {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; 
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #601212;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.botones-formulario {
+    display: flex;
+    gap: 10px; 
+}
+
+button[type="button"],
+button[type="reset"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="button"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #218838;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+@media only screen and (max-width: 600px) {
+    .contenedor {
+        max-width: 100%;
+    }
+
+    .botones-formulario {
+        flex-direction: column; 
+    }
+
+    button[type="button"],
+    button[type="reset"] {
+        width: 100%;
+    }
+}
+
+.grupo-formulario.etiquetas-inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.grupo-formulario.etiquetas-inline label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
